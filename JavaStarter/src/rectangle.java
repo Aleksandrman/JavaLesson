@@ -41,15 +41,23 @@ public class rectangle {
 		for(int a = 1 ;a<=x ;a++) {
 			for(int b = x;b>a ;b--) {
 				System.out.print(" ");		
-			
-			}
+						}
 			for(int c = 1;c<a*2 ;c++) {
-				System.out.print("*");	
+				if(a != x) {
+				if(c == 1)
+					System.out.print("/");
+						
+				if(c == a*2 -1)
+					System.out.print("\\");
+				else
+					System.out.print(" ");
+				}
+				else
+					System.out.print("¯");
+				
 			} 
-			System.out.println();
-			
-		}
-		
+			System.out.println();			
+		}		
 }
 
     static void rhombus(int num) {
@@ -58,12 +66,38 @@ public class rectangle {
 		
 		for(int b = num; b>a; b--)
 			System.out.print(" ");
-		for(int b = 1; b<a*2;b++)
-			System.out.print("*");
-		
+		for(int с = 1; с<a*2;с++) {
+			if((num%2 ==0)) {
+				if(с == 1)
+					System.out.print("/");
+				if(с == a*2 -1)
+					System.out.print("\\");
+				else
+					System.out.print(" ");
+			}
+			else {
+						if(a !=num/2+ (num%2)) {
+								if(с == 1)
+									System.out.print("/");
+						
+								if(с == a*2 -1)
+									System.out.print("\\");
+								else
+									System.out.print(" ");
+												}			
+									else {
+										if(с == 1)
+											System.out.print("<");
+										if(с == a*2 -1)
+											System.out.print(">");
+										else
+											System.out.print(" ");
+											}
+			}
+		}
+			
 		System.out.println();
 	}
-
 	//-----
 	if (num%2 !=0) {
 	int j = 1;
@@ -71,8 +105,16 @@ for(int a = 1; a<=num/2+(num%2)-1;a++) {
 	
 	for(int b = num/2+ (num%2); b>=j; b--)
 		System.out.print(" ");
-	for(int b = num; b>a*2;b--)
-		System.out.print("*");
+	for(int c = num; c>a*2;c--) {
+		if(c == num)
+			System.out.print("\\");
+				
+		if(c == a*2+1)
+			System.out.print("/");
+		else
+			System.out.print(" ");	
+	}
+	
 		j--;
 	System.out.println();
 }	
@@ -83,19 +125,21 @@ for(int a = 1; a<=num/2+(num%2)-1;a++) {
 			
 			for(int b = num/2+ (num%2); b>=j; b--)
 				System.out.print(" ");
-			for(int b = num+1; b>a*2;b--)
-				System.out.print("*");
-				
+			for(int c = num+1; c>a*2;c--) {
+				if(c == num+1)
+					System.out.print("\\");
+						
+				if(c == a*2+1)
+					System.out.print("/");
+				else
+					System.out.print(" ");	
+						}				
 			j--;
-				
-				
+			
 				System.out.println();
 	}
 	}
-	
-	
-		
-	
+
 }
 
 	
